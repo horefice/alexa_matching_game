@@ -1,0 +1,1 @@
+web: gunicorn matching_game:app --log-file=-

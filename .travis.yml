@@ -1,0 +1,20 @@
+language: python
+python:
+- '2.6'
+- '2.7'
+- '3.3'
+- '3.4'
+before_install:
+- pip install pytest
+install:
+- pip install -r requirements.txt
+script: py.test
+deploy:
+  provider: heroku
+  api_key:
+    secure: LRdeQVGpfgsf/z0tZD97yJiWzOoN2ozhfz8q1RytoPvHDWPsC8p+m98a2seQr0MqCbL2+egkb+qkmA6+qehBj1zWGyuggImntr+bkCLKC6ogaN9mW1lkzmUHpbbB8f0+QjZHFwtG8Q8KglUGArfzOcpYvBLkeO1vqi349gh4ksGoiMpZ3iQOZwiAhhJaA2tIsnm6CxKhQUNU3OtEvjRYyKudzW3h7Gpk8kEP4UDWLndCDh6ol/Ojjwd9x+fzMZDUPGxNifV4Uyh3CKOHNDCJ31cJb9hB19fUnCuj7vlLXtzsJvgIQuMoFVYW1yIk0E+Yp9EWlX2Nl+2dYYqwFbxA1YJUvQt9MCF6Th5aDgP4lvB1tGLi0RvBEKke4viez5GpCnP2ZEvBbPk96G+cFzun8bBAI2+pe03qxldQxTWeDocTH40kJPTuUXbtzKkSv73gEK3G2pix8noj7cJSJTFOOsJfFYS/px2yqBIRfcgB9uPB2uIrhsvNYYMr1VZzfpF9ACjNLV/FPx4EgLsmoOOSrPF+J7EvCnix9I8/+CViQOm7h6XBnFfP7uKo9nX4jrch5M/+FReVWnjFGw29e2KShSr12HS7QgN95KSI2UYsvWRSFFobp+2vrlpsFALcnUqU2+wKkK7vhahS+NG6DdHOcXOuDInDPAO1URikpYHwaUo=
+  app: alexa-matching-game
+  on:
+    repo: horefice/alexa_matching_game
+notifications:
+  email: false

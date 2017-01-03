@@ -1,0 +1,11 @@
+welcome: Welcome to matching game. Please say one number between 0 and 9 at a time!
+
+next: You said number {{ number }} and the animal is {{ animal }}. Which number is the matching one?
+
+same: Try not to repeat the number.
+
+win: You said number {{ number }} and the animal is {{ animal }}. Good job! Now find the next pair.
+
+lose: You said number {{ number }} and the animal is {{ animal }}. Sorry, that's the wrong answer.
+
+end: You said number {{ number }} and the animal is {{ animal }}. You did very well! The game is over.
